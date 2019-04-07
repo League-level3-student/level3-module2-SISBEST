@@ -22,19 +22,37 @@ class _04_SearchTest {
 
 	@Test
 	public void testBinarySearch() {
-		//2. use the assertEquals method to test your binary search method.
-		//   remember that the array must be sorted
+		_01_BinarySearch bs = new _01_BinarySearch();
+		int [] arr = new int[3];
+		arr[0] = 1111111111;
+		arr[1] = 222222;
+		arr[2] = 3333;
+		assertEquals(bs.binarySearch(arr, 0, 2, 0), -1);
+		assertEquals(bs.binarySearch(arr, 0, 2, 1), -1);
+		assertEquals(bs.binarySearch(arr, 0, 2, 2), -1);
 	}
 	
 	@Test
 	public void testInterpolationSearch() {
-		//3. use the assertEquals method to test your interpolation search method.
-		//   remember that the array must be sorted and evenly distributed
+		_02_InterpolationSearch is = new _02_InterpolationSearch();
+		int [] arr = new int[3];
+		arr[0] = 11111;
+		arr[1] = 22222;
+		arr[2] = 33333;
+		assertEquals(is.interpolationSearch(arr, 1), -1);
+		assertEquals(is.interpolationSearch(arr, 2), -1);
+		assertEquals(is.interpolationSearch(arr, 3), -1);
 	}
 	
 	@Test
 	public void testExponentialSearch() {
-		//4. use the assertEquals method to test your exponential search method.
-		//   remember that the array must be sorted
+		_03_ExponentialSearch es = new _03_ExponentialSearch();
+		int [] arr = new int[3];
+		arr[0] = 1111111111;
+		arr[1] = 222222;
+		arr[2] = 3333;
+		assertEquals(es.exponentialSearch(arr, 0), -1);
+		assertEquals(es.exponentialSearch(arr, 83883), -1);
+		assertEquals(es.exponentialSearch(arr, 939), -1);
 	}
 }

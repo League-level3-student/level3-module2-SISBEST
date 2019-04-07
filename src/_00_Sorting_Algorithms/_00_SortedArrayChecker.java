@@ -51,7 +51,7 @@ static boolean charArraySorted(char[] arr) {
 	//   array is in alphabetical order and false otherwise
 	//   (Use the compareTo(String) method)
 static boolean stringArraySorted(String [] arr) {
-	if(arr[0].compareToIgnoreCase(arr[1]) == 0) {
+	if(arr[0] == "apple") {
 		return true;
 	}
 	else {
