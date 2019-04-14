@@ -3,6 +3,7 @@ package _00_Sorting_Algorithms;
 import java.util.Random;
 
 public class BogoSorter extends Sorter {
+	Random r = new Random();
 	public BogoSorter() {
 		type = "Bogo";
 	}
@@ -20,6 +21,21 @@ public class BogoSorter extends Sorter {
 	//1. Complete the sort method using the Bogo sort algorithm. 
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
+		boolean sorted = true;
 
+		for (int i = 0; i < array.length - 1; i++) {
+		    if (array[i] > array[i+1]) {
+		        sorted = false;
+		        break;
+		    }
+		}
+		if(sorted=false) {
+			int a = r.nextInt(array.length);
+			int ra = a;
+			int b = r.nextInt(array.length);
+			int rb = b;
+			array[a] = rb;
+			array[b] = ra;
+		}
 	}
 }
