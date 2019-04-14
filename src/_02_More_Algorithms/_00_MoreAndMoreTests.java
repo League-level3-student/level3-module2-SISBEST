@@ -30,20 +30,20 @@ public class _00_MoreAndMoreTests {
 //
 //	  }
 //
-//	@Test
-//	  public void SquareTest() {
-//
-//	    assertTrue(isSquare(4));
-//	    assertTrue(isSquare(144));
-//	    assertTrue(isSquare(64));
-//	    assertTrue(isSquare(10201));
-//	    assertTrue(isSquare(1));
-//	    assertFalse(isSquare(3));
-//	    assertFalse(isSquare(22));
-//	    assertFalse(isSquare(143));
-//
-//	  }
-//
+	@Test
+	  public void SquareTest() {
+
+	    assertTrue(isSquare(4));
+	    assertTrue(isSquare(144));
+	    assertTrue(isSquare(64));
+	    assertTrue(isSquare(10201));
+	    assertTrue(isSquare(1));
+	    assertFalse(isSquare(3));
+	    assertFalse(isSquare(22));
+	    assertFalse(isSquare(143));
+
+	  }
+
 //	@Test
 //	  public void CubeTest() {
 //
@@ -60,6 +60,11 @@ String multiply(int a, int b) {
 	String ans = a + " x " + b + " = " + a*b;
 	return ans;
 }
-
-
+boolean isSquare(int num) {
+		if(Math.sqrt(num) == (int) Math.sqrt(num)) {
+			return true;
+		}
+	return false;
+	
+}
 }
