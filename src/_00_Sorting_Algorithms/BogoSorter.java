@@ -31,9 +31,9 @@ public class BogoSorter extends Sorter {
 		}
 		if(sorted=false) {
 			int a = r.nextInt(array.length);
-			int ra = a;
+			int ra = array[a];
 			int b = r.nextInt(array.length);
-			int rb = b;
+			int rb = array[b];
 			array[a] = rb;
 			array[b] = ra;
 		}
