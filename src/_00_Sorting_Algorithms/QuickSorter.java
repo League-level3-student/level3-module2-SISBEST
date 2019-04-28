@@ -17,6 +17,7 @@ public class QuickSorter extends Sorter {
 	}
 	
 	private void quickSort(int[] array, int low, int high, SortingVisualizer display) {
+		display.updateDisplay();
 		//2. create two integer variables called i and j and set them equal
 		//   to low and high respectively.
        int i = low;

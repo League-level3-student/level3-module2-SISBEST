@@ -18,18 +18,18 @@ public class _00_MoreAndMoreTests {
 	    assertEquals("8 x 11 = 88", multiply(8, 11));
 	  }
 
-//	@Test
-//	  public void PrimeTest() {
-//
-//	    assertTrue(isPrime(3));
-//	    assertTrue(isPrime(5));
-//	    assertTrue(isPrime(541));
-//	    assertFalse(isPrime(4));
-//	    assertFalse(isPrime(12));
-//	    assertFalse(isPrime(527));
-//
-//	  }
-//
+	@Test
+	  public void PrimeTest() {
+
+	    assertTrue(isPrime(3));
+	    assertTrue(isPrime(5));
+	    assertTrue(isPrime(541));
+	    assertFalse(isPrime(4));
+	    assertFalse(isPrime(12));
+	    assertFalse(isPrime(527));
+
+	  }
+
 	@Test
 	  public void SquareTest() {
 
@@ -44,18 +44,18 @@ public class _00_MoreAndMoreTests {
 
 	  }
 
-//	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	@Test
+	  public void CubeTest() {
+
+	    assertTrue(isCube(27));
+	    assertTrue(isCube(216));
+	    assertTrue(isCube(729));
+	    assertTrue(isCube(1));
+	    assertFalse(isCube(3));
+	    assertFalse(isCube(22));
+	    assertFalse(isCube(143));
+
+	  }
 String multiply(int a, int b) {
 	String ans = a + " x " + b + " = " + a*b;
 	return ans;
@@ -65,6 +65,30 @@ boolean isSquare(int num) {
 			return true;
 		}
 	return false;
-	
 }
+boolean isPrime(int n) {
+	
+    if (n <= 1) {
+    	return false; 
+    }
+  
+    // Check from 2 to n-1 
+    for (int i = 2; i < n; i++) 
+        if (n % i == 0) {
+            return false;
+        }
+  
+    return true; 
+}
+boolean isCube(int numb) {
+	 int n = (int) Math.round(Math.pow(numb, 1.0/3.0));
+     if((numb == n * n * n))
+			{
+			   return true;
+         }
+		   else
+			{
+				return false;
+			}
+     }
 }
