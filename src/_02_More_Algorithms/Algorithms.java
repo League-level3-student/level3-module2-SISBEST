@@ -1,5 +1,6 @@
 package _02_More_Algorithms;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Algorithms {
@@ -27,6 +28,31 @@ public class Algorithms {
 			}
 	}
 		return rlnocomp;
+	}
+
+	public static Object containsSOS(List<String> message1) {
+		for(int i = 0; i<message1.size(); i++ ) {
+			if(message1.get(i).indexOf(" ... --- ... ") != -1) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static List<Double> sortScores(List<Double> results) {
+		Double[] array = (Double[]) results.toArray();
+		Arrays.sort(array);
+		return Arrays.asList(array);
+	}
+	public static List<String> sortDNA(List<String> results) {
+		String[] array = (String[]) results.toArray();
+		Arrays.sort(array);
+		return Arrays.asList(array);
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		if(words[1].compareto)
+		return null;
 	}
 	
 }
